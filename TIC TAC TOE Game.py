@@ -1,4 +1,4 @@
-#Code for Tik Tac Toe by Rohan Poddar, Rohan Sahni and Ashna Kedia
+#Code for Tic Tac Toe by Rohan Poddar, Rohan Sahni and Ashna Kedia
 #Taken help from http://inventwithpython.com/chapter10.html
 import random
 from random import randint as randi
