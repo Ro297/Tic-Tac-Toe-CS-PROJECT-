@@ -25,9 +25,10 @@ def goes_first():
 def user_move():
     move = ' '  
     while move not in [0,1,2,3,4,5,6,7,8] or not freespace(position,move):
-        print ('What is your next move? (1-9)')
+        print ('What is your move? (1-9)')
         move = input()
-        return int(move-1)
+        print 'Invalid Move'
+    return int(move-1)
 
 def freespace(position, move):
     return position[move] == ' '
@@ -53,7 +54,7 @@ def check4full(position):
             
 print 'In a galaxy far far away, humans and machines are fighting to secure dominance over the other. The machines have challenged the humans to a game of Tic Tac Toe to see who gains control of the galaxy'
 name = raw_input("Who is representing the humans for their survival? ")
-print 'Hello ' + name +',puny Human.' + 'I am Darth Vader, champion of the machines. I challenge you to beat me and take control of the galaxy!'
+print 'Hello ' + name +',puny human.' + 'I am Pokul Grabhu, champion of the machines. I challenge you to beat me and take control of the galaxy!'
 position = [' ']*9
 usercounter = ''
 while usercounter != 'X' and usercounter != 'O':
