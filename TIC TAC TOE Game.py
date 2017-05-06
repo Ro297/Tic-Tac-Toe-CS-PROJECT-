@@ -27,7 +27,6 @@ def user_move():
     while move not in [0,1,2,3,4,5,6,7,8] or not freespace(position,move):
         print ('What is your move? (1-9)')
         move = input()
-        print 'Invalid Move'
     return int(move-1)
 
 def freespace(position, move):
