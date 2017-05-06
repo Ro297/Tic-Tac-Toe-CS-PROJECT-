@@ -21,16 +21,17 @@ def goes_first():
         return 'User'
     else:
         return 'Computer'
-
-def user_move():
-    move = ' '  
-    while move not in [0,1,2,3,4,5,6,7,8] or not freespace(position,move):
-        print ('What is your move? (1-9)')
-        move = input()
-    return int(move-1)
-
+    
 def freespace(position, move):
     return position[move] == ' '
+
+def user_move():
+    print ('What is your move? (1-9)')
+    usermove = input()  
+    while usermove not in [0,1,2,3,4,5,6,7,8] or not freespace(position,usermove):
+        print ('Invalid move! What is your move? (1-9)')
+        usermove = input()
+    return int(usermove-1)
 
 def make_move(position,counter, move):
     position[move] = counter
